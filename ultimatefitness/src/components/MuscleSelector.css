@@ -1,0 +1,272 @@
+.muscle-selector {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Grid Styles */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-card {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.section-image {
+  width: 100%;
+  height: 100%;
+}
+
+.section-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-card h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+  font-size: 24px;
+}
+
+/* Muscle Grid Styles */
+.muscle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 30px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.muscle-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  aspect-ratio: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 200px;
+}
+
+.muscle-card:hover {
+  transform: scale(1.05);
+}
+
+.muscle-card h3 {
+  margin: 10px 0;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.exercise-count {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Exercise Grid Styles */
+.exercises-container {
+  padding: 20px;
+}
+
+.exercises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.exercise-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.exercise-thumbnail {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.exercise-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exercise-card h3 {
+  margin: 15px;
+  color: #333;
+}
+
+.exercise-meta {
+  padding: 0 15px 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.difficulty, .equipment {
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Exercise Detail Styles */
+.exercise-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-container {
+  margin: 20px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.exercise-gif {
+  width: 100%;
+  display: block;
+}
+
+.exercise-instructions {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.exercise-instructions ol {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+/* Back Button Styles */
+.back-button {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background: #e0e0e0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 300px;
+  }
+
+  .section-card {
+    max-width: 250px;
+  }
+
+  .muscle-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .muscle-card {
+    min-height: 180px;
+  }
+
+  .exercises-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+/* New styles for muscle thumbnails */
+.muscle-thumbnail {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.muscle-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.muscle-card:hover .muscle-thumbnail img {
+  transform: scale(1.1);
+}
+ 

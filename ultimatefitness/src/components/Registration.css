@@ -1,0 +1,204 @@
+.registration-container {
+  min-height: 100vh;
+  background-color: #000000;
+  color: white;
+  padding: 20px;
+}
+
+.registration-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(20, 20, 30, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 100, 255, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.phone-input {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(30, 30, 40, 0.9);
+  border: 1px solid #2196f3;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.phone-input:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.3);
+}
+
+.form-group label {
+  color: #2196f3;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.submit-btn,
+.send-otp-btn,
+.verify-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover,
+.send-otp-btn:hover,
+.verify-btn:hover {
+  background-color: #1976d2;
+  transform: translateY(-2px);
+}
+
+.error-text {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.recaptcha-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(30, 30, 40, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Phone input specific styles */
+.phone-input-container {
+  background-color: rgba(30, 30, 40, 0.9) !important;
+}
+
+.phone-input {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.phone-input:focus {
+  border-color: #2196f3 !important;
+}
+
+/* Form row for age and gender */
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+h2 {
+  color: #2196f3;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Verification method select styling */
+.verification-select {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(30, 30, 40, 0.9);
+  border: 1px solid #2196f3;
+  border-radius: 5px;
+  color: white;
+  margin-top: 5px;
+}
+
+/* Style for placeholder text */
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Style for select options */
+option {
+  background-color: #1a1a2e;
+  color: white;
+}
+
+.user-id-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.success-message {
+  background: rgba(20, 20, 30, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 100, 255, 0.2);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.user-id {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2196f3;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background: rgba(33, 150, 243, 0.1);
+  border-radius: 5px;
+  border: 2px solid #2196f3;
+  letter-spacing: 2px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-message h2 {
+  color: #2196f3;
+  margin-bottom: 20px;
+}
+
+.success-message p {
+  color: white;
+  margin: 10px 0;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.auth-link a {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.auth-link a:hover {
+  color: #1976d2;
+  text-decoration: underline;
+}
